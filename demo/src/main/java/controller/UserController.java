@@ -7,7 +7,7 @@ import app.UserRepository;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:4200")
-public class AnyaController {
+public class UserController {
 
     // private final UserRepository userRepo;
 }
