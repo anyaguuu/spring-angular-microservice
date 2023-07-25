@@ -1,3 +1,5 @@
+package beans;
+
 public class User {
 
     /* User variables */
