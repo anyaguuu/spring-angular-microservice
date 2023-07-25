@@ -13,7 +13,7 @@ import app.UserRepository;
 import beans.User;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "http://localhost:4200") // deploy frontend
 public class UserController {
 
     private final UserRepository userRepo;
@@ -23,11 +23,13 @@ public class UserController {
         this.userRepo = userRepo;
     }
 
+    /* Fetches all User entities from database */
     @GetMapping("/users")
     public List<User> getUsers() {
         return (List<User>) userRepo.findAll();
     }
 
+    /* Persists a new entity in database */
     @PostMapping("/users")
     void addUser(@RequestBody User user) {
         userRepo.save(user);
