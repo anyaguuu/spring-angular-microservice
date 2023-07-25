@@ -25,6 +25,6 @@ public class Application {
 				userRepo.save(user);
 			});
 			userRepo.findAll().forEach(System.out::println);
-			}
-
+		};
+	};
 }
